@@ -1,0 +1,123 @@
+---
+---
+
+.random-enter {
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            -moz-animation-delay: 0.2s * $i;
+            -o-animation-delay: 0.2s * $i;
+            -webkit-animation-delay: 0.2s * $i;
+            animation-delay: 0.2s * $i;
+        }
+    }
+}
+
+img {
+   margin: 20px 0 20px 0;
+   max-width:100%;
+}
+
+.index-category-anchor {
+    color:black;
+    cursor:pointer;
+    padding: .2em 0 .3em;
+    text-decoration:none !important;
+    &:hover {
+        color:gray;
+    }
+}
+
+.posts .label {
+    margin-left:0;
+    margin-right: 3px;
+}
+
+pre code {
+    color:white !important;
+}
+
+#wrap .navbar {
+    position:fixed !important;
+    z-index:3;
+    width:100%;
+}
+
+#wrap .container {
+    padding-top:70px;
+}
+
+.hll {
+    background-color: teal;
+}
+
+
+
+table.highlighttable {
+  overflow-x:auto;
+  display:block;
+  margin-bottom:20px;
+  border-collapse: collapse;
+}
+
+table.highlighttable td.code {
+  width:100%;
+}
+
+pre {
+  border: none;
+  padding:0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+pre code {
+    color:white;
+    white-space: pre;
+    word-wrap: initial;
+}
+
+p > code {
+  display: inline-block;
+  background: #f8f8f8;
+  line-height: 1.42em;
+  color: black;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 3px;
+  padding: 0 3px;
+  margin: 0px 1px 0px 1px;
+}
+
+.highlight {
+  margin-bottom:30px;
+}
+
+.highlight pre {
+  margin:0px;
+  padding:3px;
+  border: none;
+}
+
+.highlight .gutter {
+  border-right:1px solid #ccc;
+  padding: 8px;
+  color: #999 !important;
+  background: #e7e7e1;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.highlight .code {
+  border-radius: 0px 10px 10px 0px;
+  padding: 8px;
+  background: #49483e url('monokaibg.jpg') top left; color:white;
+  width:100%;
+}
+
+
+img {
+  box-shadow: 6px 6px 6px #999;
+}
+
+

@@ -1,0 +1,51 @@
+---
+layout: idx
+---
+{% include JB/setup %}
+
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li style="margin-bottom:80px">
+      <h3>
+        <a href="{{ BASE_PATH }}/categories.html#{{ post.category }}-ref" class="index-category-anchor"><i class="icon-{{ post.category }}" style="font-size:2em;"></i></a>
+        
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <p>
+        {{ post.description | markdownify}}
+      </p>
+      <!-- Date -->
+      <p class="date">
+        {{ post.date | date: "%A, %B %e, %Y" }}
+      </p>
+      <!-- END Date -->
+      <!-- Tags -->
+      <p>
+        {% if post.tags.size > 0 %}
+          {% for tag in post.tags %}
+            <a href="{{ BASE_PATH }}/tags.html#{{tag}}-ref" class="label label-default">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+      </p>
+      <!-- END Tags -->
+    </li>
+  {% endfor %}
+</ul>
+
+<ul class="pagination">
+  {% if paginator.next_page %}
+    <li class="next"><a href="/page{{paginator.next_page}}" title="Older">Older</a></li>
+  {% endif %}
+
+  <li class="disabled">
+    <a>Page {{ paginator.page }}/{{ paginator.total_pages }}</a>
+  </li>
+
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <li class="prev"><a href="/" title="Newer">Newer</a></li>
+    {% else %}
+      <li class="prev"><a href="/page{{paginator.previous_page}}" title="Newer">Newer</a></li>
+    {% endif %}
+  {% endif %}
+</ul>

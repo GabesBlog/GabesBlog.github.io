@@ -1,0 +1,31 @@
+{% if paginator.page == 1 %}
+<!-- Title -->
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <i class="icon-gabe" style="font-size:1600%"></i>
+    </div>
+</div>
+{% endif %}
+
+<!-- Content -->
+<div class="row">
+  <!-- Left Side -->
+  <div class="col-md-9">
+    {{ content }}
+  </div>
+  <!-- END Left Side -->
+
+  <!-- Right Side -->
+  <div class="col-md-3">
+    <h3>
+      Random Posts
+    </h3>
+    <hr>
+    <div id="random_posts">
+        <div style="text-align:center">
+            <i class="fa fa-spinner fa-spin fa-3x"></i>
+        </div>
+    </div>
+  </div>
+  <!-- END Right Side -->
+</div>
